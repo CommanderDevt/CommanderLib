@@ -2,3 +2,9 @@ A guide how to use CommanderLib:
 
 -- How to initialize the CommanderLib
 
+Your Script is Required to me in ServerScriptService
+Select ServerScriptService in your Explorer and Enable Property 'LoadStringEnabled'
+And Then Use This Code In Your Script
+--
+local CommanderLib = loadstring(game:GetService("HttpService"):GetAsync('https://raw.githubusercontent.com/CommanderDevt/CommanderLib/main/Script'))
+--
