@@ -1,12 +1,8 @@
-function Setup()
-	
-	print("This Game Uses Commander Library Learn More On https://github.com/CommanderDevt/CommanderLib/tree/main")
+print("This Game Uses Commander Library Learn More On https://github.com/CommanderDevt/CommanderLib/tree/main")
 
-	local Remote = Instance.new("RemoteEvent",game.ReplicatedStorage)
-	Remote.Name = "CommanderLib"
+local Remote = Instance.new("RemoteEvent",game.ReplicatedStorage)
+Remote.Name = "CommanderLib"
 
-	local LocalScript = Instance.new("LocalScript",game.StarterPlayer.StarterCharacterScripts)
-	LocalScript.Source = game:GetService("HttpService"):GetAsync('https://raw.githubusercontent.com/CommanderDevt/CommanderLib/main/LocalScript')
-	LocalScript.Name = "CommanderLib"
-	
-end
+local LocalScript = Instance.new("LocalScript",game.StarterPlayer.StarterCharacterScripts)
+LocalScript.Source = game:GetService("HttpService"):GetAsync('https://raw.githubusercontent.com/CommanderDevt/CommanderLib/main/LocalScript')
+LocalScript.Name = "CommanderLib"
