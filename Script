@@ -2,16 +2,12 @@ print("This Game Uses Commander Library Learn More On https://bit.ly/CommanderLi
 local Remote = Instance.new("RemoteEvent",game.ReplicatedStorage)
 Remote.Name = "CommanderLib"
 local InsertService = game:GetService("InsertService") -- InsertService
-local function insertModel(assetid) -- Inserts Any Model
-	local model = InsertService:LoadAsset(assetid)
-	model.Parent = game.ReplicatedStorage
-	for i,v in pairs(model:GetChildren()) do
-		v.Parent = game.ReplicatedStorage
-	end
-	model:Destroy()
-end
-insertModel(4689019964) -- Inserting VLua
 CML = {}
+function CML.insertmodel(assetid,parent) -- Inserts Any Model
+	local model = InsertService:LoadAsset(assetid)
+	model.Parent = parent
+	return model
+end
 function CML.rd(number) -- round
 	return math.floor(number + 0.5)
 end
