@@ -21,9 +21,16 @@ end
 function CML.rdd(number) -- rounddown
 	return math.floor(number)
 end
-function CML.Tpc(char,pos:Vector3) -- Tpcharacter
-	char:PivotTo(CFrame.new(pos))
+function CML.Tp(obj,pos:Vector3)
+	if obj:IsA("Model") then
+		obj:PivotTo(CFrame.new(pos))
+	elseif obj:IsA("Player") then
+		obj.Character:PivotTo(CFrame.new(pos))
+	end
 end
-function CML.Tpp(plr,pos:Vector3) -- Tpplayer
-	plr.Character:PivotTo(CFrame.new(pos))
+function CML.anim(char,anim)
+	return char:FindFirstChildWhichIsA("Humanoid"):LoadAnimation(anim)
+end
+function CML.sethp(char,health)
+	char:FindFirstChildWhichIsA("Humanoid").Health = health
 end
