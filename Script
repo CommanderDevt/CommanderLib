@@ -1,9 +1,29 @@
-print("This Game Uses Commander Library Learn More On https://github.com/CommanderDevt/CommanderLib/tree/main")
-
+print("This Game Uses Commander Library Learn More On https://bit.ly/CommanderLib")
 local Remote = Instance.new("RemoteEvent",game.ReplicatedStorage)
 Remote.Name = "CommanderLib"
-
-local LocalScript = Instance.new("LocalScript",game.StarterPlayer.StarterCharacterScripts)
-LocalScript.Source = game:GetService("HttpService"):GetAsync('https://raw.githubusercontent.com/CommanderDevt/CommanderLib/main/LocalScript')
-LocalScript.Name = "CommanderLib"
-
+local InsertService = game:GetService("InsertService") -- InsertService
+local function insertModel(assetid) -- Inserts Any Model
+	local model = InsertService:LoadAsset(assetid)
+	model.Parent = game.ReplicatedStorage
+	for i,v in pairs(model:GetChildren()) do
+		v.Parent = game.ReplicatedStorage
+	end
+	model:Destroy()
+end
+insertModel(4689019964) -- Inserting VLua
+CML = {}
+function CML.rd(number) -- round
+	return math.floor(number + 0.5)
+end
+function CML.rdu(number) -- roundup
+	return math.ceil(number)
+end
+function CML.rdd(number) -- rounddown
+	return math.floor(number)
+end
+function CML.Tpc(char,pos:Vector3) -- Tpcharacter
+	char:PivotTo(CFrame.new(pos))
+end
+function CML.Tpp(plr,pos:Vector3) -- Tpplayer
+	plr.Character:PivotTo(CFrame.new(pos))
+end
