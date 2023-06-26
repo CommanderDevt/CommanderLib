@@ -8,3 +8,98 @@ And Then Use This Code In Your Script
 --
 local CommanderLib = loadstring(game:GetService("HttpService"):GetAsync('https://raw.githubusercontent.com/CommanderDevt/CommanderLib/main/Script'))()
 --
+And Done Now you can use CommanderLib in this script
+
+-- How to Use
+Currently This Library Has 7 Functions insertmodel, rd (Round), rdu (Round Up), rdd (Round Down), Tp, anim, sethp
+
+insert model:
+this functions inserts any model or anything else where you want
+how to use
+--
+CML.insertmodel([assetid],[path])
+--
+this will create a model and it will paste the asset in the model you can use
+--
+local Model = CML.insertmodel([assetid],[path])
+--
+to get the model and modify it's properties
+
+rd:
+
+rd -- Round
+
+Rounds Numbers
+
+--
+local roundednumber = CML.rd(1.3) -- Returns 1
+--
+
+--
+local roundednumber = CML.rd(1.6) -- Returns 2
+--
+
+and it will return the rounded number
+
+rdu:
+
+rdu -- Round Up
+
+it will Round a number up
+
+--
+local roundedupnum = CML.rdu(1.3) -- Returns 2
+--
+
+rdd:
+
+rdd -- Round Down
+
+Rounds a Number Down
+
+--
+local roundeddown = CML.rdd(1.33) -- Returns 1
+
+Tp:
+
+Tp - Teleport
+
+Teleports a player/character to a vector3
+
+--
+CML.Tp(game.workspace.Artemderef,Vector3.new(0,100,0)) -- Teleports Artemderef to Vector3 0 100 0 using the character
+--
+it works with player too
+--
+CML.Tp(game.Players.Artemderef,Vector3.new(100,100,0)) -- Teleports Artemderef To Vector3 100 100 0 Using the player
+--
+
+anim:
+
+anim - Animation
+
+Returns a Loaded Animation
+
+--
+local anim = CML.anim(game.workspace.Artemderef,game.workspace.Animation) -- Gets The loaded Animation
+anim:Play() -- Plays The Animation
+--
+
+--
+CML.anim(game.workspace.Artemderef,game.workspace.Animation):Play() -- Plays The Animation
+--
+
+
+sethp:
+
+sethp -- Set Health
+
+Sets A Character's Health to a specified Number
+
+--
+CML.sethp(game.workspace.Artemderef,5) -- Sets Artemderef's Health to 5
+--
+
+------
+
+Thats All Functions For Now
