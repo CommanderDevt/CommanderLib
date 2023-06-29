@@ -30,6 +30,6 @@ end
 function CML.sethp(char,health)
 	char:FindFirstChildWhichIsA("Humanoid").Health = health
 end
-local function printForwardPosition(obj,studs)
+function CML.forward(obj,studs)
 	return obj.Position + obj.CFrame.LookVector * studs
 end
